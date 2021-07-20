@@ -10,6 +10,8 @@ function playSound(sound) {
 
     // verificar se encontrou algum audio 
     if(audioElement) {
+        // corrigindo tempo de reação do botão
+        audioElement.currentTime = 0;
         audioElement.play()
     }
 
