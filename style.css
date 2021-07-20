@@ -61,6 +61,9 @@ h1 {
 .composer button:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
+a {
+    color: #FF0;
+}
 
 footer {
     margin-top: 20px;

@@ -2,18 +2,6 @@ document.body.addEventListener('keyup', (event)=>{
     playSound(event.code.toLowerCase())
 });
 
-document.querySelector('.composer button').addEventListener('click', () => {
-    let song = document.querySelector('#input').value;
-
-    if(song !== '') {
-        // função que lê cada elemento dentro do array
-        let songArray = song.split('');
-
-        console.log(songArray)
-    };
-});
-
-
 function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
     
