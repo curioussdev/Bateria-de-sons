@@ -3,5 +3,11 @@ document.body.addEventListener('keyup', (event)=>{
 });
 
 function playSound(sound) {
-    let audioElement = document.querySelector(`#s_${sound}`)
+    let audioElement = document.querySelector(`#s_${sound}`);
+
+    // verificar se encontrou algum audio 
+    if(audioElement) {
+        audioElement.play()
+    }
+
 };
