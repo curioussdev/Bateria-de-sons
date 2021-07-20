@@ -3,7 +3,12 @@ document.body.addEventListener('keyup', (event)=>{
 });
 
 document.querySelector(' .composer button').addEventListener('click', ()=>{
-    
+    let song = document.getElementById('input').value;
+
+    if(song !== '') {
+        let songArray = song.split('');
+        playComposition(songArray);
+    }
 });
 
 function playSound(sound) {
@@ -16,13 +21,19 @@ function playSound(sound) {
         // corrigindo tempo de reação do audioElement
         audioElement.currentTime = 0;
         audioElement.play()
-    }
+    };
     //verificar se achou o key element
     if(keyElement) {
         keyElement.classList.add('active');
         // função para remover a class active do elemento (botão) 
         setTimeout(() => {
             keyElement.classList.remove('active');
-        }, 300)
+        }, 300);
     }
+};
+
+function playComposition(songArray) {
+    for(songItem of songArray) {
+        playSound(`key${songItem}`)
+    };
 };
