@@ -2,6 +2,13 @@ document.body.addEventListener('keyup', (event)=>{
     playSound(event.code.toLowerCase())
 });
 
+document.querySelector('.composer button').addEventListener('click', () => {
+    let song = document.querySelector('#input').value;
+
+    
+});
+
+
 function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
     
@@ -10,7 +17,7 @@ function playSound(sound) {
 
     // verificar se encontrou algum audio 
     if(audioElement) {
-        // corrigindo tempo de reação do botão
+        // corrigindo tempo de reação do audioElement
         audioElement.currentTime = 0;
         audioElement.play()
     }
