@@ -15,7 +15,13 @@ function playSound(sound) {
 
     //verificar se achou o key element
     if(keyElement) {
-        keyElement.classList.add('active')
+        keyElement.classList.add('active');
+
+
+        // função para remover a class active do elemento (botão) 
+        setTimeout(() => {
+            keyElement.classList.remove('active');
+        }, 300)
     }
 
 };
