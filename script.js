@@ -1,5 +1,5 @@
 document.body.addEventListener('keyup', (event)=>{
-    playSound(event.code.toLowerCase())
+    playSound(event.code.toLowerCase());
 });
 
 document.querySelector(' .composer button').addEventListener('click', ()=>{
@@ -34,12 +34,13 @@ function playSound(sound) {
 
 function playComposition(songArray) {
     let wait = 0;
-    for(songItem of songArray) {
-        setTimeout(() => {
-            playSound(`key${songItem}`);
+
+    for(let songItem of songArray) {
+
+        setTimeout(( )=>{
+            playSound(`key${songItem}`)
         }, wait);
 
         wait +=250;
-
     };
 };
